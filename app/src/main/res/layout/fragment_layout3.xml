@@ -10,7 +10,13 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textColor="#fff"
-        android:text="Fragment 1"
+        android:text="Fragment 3"
         android:textSize="24sp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Фрагмент 1" />
+
 </LinearLayout>

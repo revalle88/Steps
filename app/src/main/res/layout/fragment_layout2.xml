@@ -13,4 +13,10 @@
         android:text="Fragment 2"
         android:textSize="24sp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Фрагмент 1" />
+
 </LinearLayout>
