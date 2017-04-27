@@ -1,16 +1,12 @@
 package com.paranoid.android.steps;
 
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,82 +23,7 @@ public class MainActivity extends AppCompatActivity {
     final static String KEY_MSG_3 = "FRAGMENT3_MSG";
 
     // класс для первого фрагмента
-    public static class MyFragment1 extends Fragment {
 
-        TextView textMsg;
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_layout1, null);
-            textMsg = (TextView) view.findViewById(R.id.tvMessage);
-
-            Bundle bundle = getArguments();
-            if (bundle != null) {
-                String msg = bundle.getString(KEY_MSG_1);
-                if (msg != null) {
-                    textMsg.setText(msg);
-                }
-            }
-            return view;
-        }
-
-        public void setMsg(String msg) {
-            textMsg.setText(msg);
-        }
-    }
-
-    // класс для второго фрагмента
-    public static class MyFragment2 extends Fragment {
-
-        TextView textMsg;
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_layout2, null);
-            textMsg = (TextView) view.findViewById(R.id.tvMessage);
-
-            Bundle bundle = getArguments();
-            if (bundle != null) {
-                String msg = bundle.getString(KEY_MSG_2);
-                if (msg != null) {
-                    textMsg.setText(msg);
-                }
-            }
-            return view;
-        }
-
-        public void setMsg(String msg) {
-            textMsg.setText(msg);
-        }
-    }
-
-    // класс для третьего фрагмента
-    public static class MyFragment3 extends Fragment {
-
-        TextView textMsg;
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_layout3, null);
-            textMsg = (TextView) view.findViewById(R.id.tvMessage);
-
-            Bundle bundle = getArguments();
-            if (bundle != null) {
-                String msg = bundle.getString(KEY_MSG_3);
-                if (msg != null) {
-                    textMsg.setText(msg);
-                }
-            }
-            return view;
-        }
-
-        public void setMsg(String msg) {
-            textMsg.setText(msg);
-        }
-    }
 
     // метод основной активности
     /** Called when the activity is first created. */
